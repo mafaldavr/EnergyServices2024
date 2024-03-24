@@ -65,7 +65,7 @@ RMSE_RFR_5 = np.sqrt(metrics.mean_squared_error(outputs_5,predictions_RFR_5))
 cvRMSE_RFR_5 = RMSE_RFR_5/np.mean(outputs_5)
 NMBE_RFR_5 = MBE_RFR_5/np.mean(outputs_5)
 values_RFR_5 = [MAE_RFR_5, MBE_RFR_5, MSE_RFR_5, RMSE_RFR_5, cvRMSE_RFR_5, NMBE_RFR_5]
-"""DTR_3 = load_model('model_DTR_3.pkl') #Regressor de Árvore de Decisão com 4 variáveis
+DTR_3 = load_model('model_DTR_3.pkl') #Regressor de Árvore de Decisão com 4 variáveis
 predictions_DTR_3 = DTR_3.predict(inputs_3) #prever o cosumo energético
 MAE_DTR_3 = metrics.mean_absolute_error(outputs_3,predictions_DTR_3) #calcular metricas
 MBE_DTR_3 = np.mean(outputs_3-predictions_DTR_3)
@@ -82,7 +82,7 @@ MSE_DTR_5 = metrics.mean_squared_error(outputs_5,predictions_DTR_5)
 RMSE_DTR_5 = np.sqrt(metrics.mean_squared_error(outputs_5,predictions_DTR_5))
 cvRMSE_DTR_5 = RMSE_DTR_5/np.mean(outputs_5)
 NMBE_DTR_5 = MBE_DTR_5/np.mean(outputs_5)
-values_DTR_5 = [MAE_DTR_5, MBE_DTR_5, MSE_DTR_5, RMSE_DTR_5, cvRMSE_DTR_5, NMBE_DTR_5]"""
+values_DTR_5 = [MAE_DTR_5, MBE_DTR_5, MSE_DTR_5, RMSE_DTR_5, cvRMSE_DTR_5, NMBE_DTR_5]
 GBR_3 = load_model('model_GBR_3.pkl') #Regressor de Impulso Gradiente com 4 variáveis
 predictions_GBR_3 = GBR_3.predict(inputs_3) #prever o cosumo energético
 MAE_GBR_3 = metrics.mean_absolute_error(outputs_3,predictions_GBR_3) #calcular metricas
@@ -162,14 +162,14 @@ values_LR_5 = [MAE_LR_5, MBE_LR_5, MSE_LR_5, RMSE_LR_5, cvRMSE_LR_5, NMBE_LR_5]
 column_names = ['Erro Médio Absoluto', 'Erro Médio Quadrático', 'Raiz do Erro Médio Quadrático', 'Erro Médio de Viés', 'Erro Médio de Viés Normalizado', 'Coeficiente de Variação do Erro Médio Quadrático'] #dar nome às colunas
 metrics_3 = pd.DataFrame(columns=column_names) #criar dataframe
 metrics_3.loc['Regressor de Floresta Aleatória'] = values_RFR_3
-#metrics_3.loc['Regressor de Árvore de Decisão'] = values_DTR_3
+metrics_3.loc['Regressor de Árvore de Decisão'] = values_DTR_3
 metrics_3.loc['Regressor de Impulso Gradiente'] = values_GBR_3
 metrics_3.loc['Regressor de Bagging'] = values_BR_3
 metrics_3.loc['Regressor de Perceptron de Múltiplas Camadas'] = values_MLPR_3
 metrics_3.loc['Regressão Linear'] = values_LR_3
 metrics_5 = pd.DataFrame(columns=column_names) #criar dataframe
 metrics_5.loc['Regressor de Floresta Aleatória'] = values_RFR_5
-#metrics_5.loc['Regressor de Árvore de Decisão'] = values_DTR_5
+metrics_5.loc['Regressor de Árvore de Decisão'] = values_DTR_5
 metrics_5.loc['Regressor de Impulso Gradiente'] = values_GBR_5
 metrics_5.loc['Regressor de Bagging'] = values_BR_5
 metrics_5.loc['Regressor de Perceptron de Múltiplas Camadas'] = values_MLPR_5
@@ -183,7 +183,7 @@ available_data = ['Consumo Atual (kWh)', 'Consumo  da Hora Anterior (kWh)', 'Dia
 available_view = ['Gráfico', 'Tabela'] #criar lista com visualizações disponíveis
 available_views = ['Gráfico', 'Tabela', 'Outliers']
 available_variables = ['Dia de Semana, Hora, Consumo  da Hora Anterior, Temperatura', 'Dia de Semana, Hora, Consumo  da Hora Anterior, Temperatura, Taxa de Humidade, Radiação Solar'] #criar lista com as variáveis disponíveis para enviar para o método
-available_methods = ['Regressor de Floresta Aleatória', """'Regressor de Árvore de Decisão'""", 'Regressor de Impulso Gradiente', 'Regressor de Bagging', 'Regressor de Perceptron de Múltiplas Camadas', 'Regressão Linear'] #criar lista com os métodos disponíveis
+available_methods = ['Regressor de Floresta Aleatória', 'Regressor de Árvore de Decisão', 'Regressor de Impulso Gradiente', 'Regressor de Bagging', 'Regressor de Perceptron de Múltiplas Camadas', 'Regressão Linear'] #criar lista com os métodos disponíveis
 available_metrics = ['Erro Médio Absoluto', 'Erro Médio Quadrático', 'Raiz do Erro Médio Quadrático', 'Erro Médio de Viés', 'Erro Médio de Viés Normalizado', 'Coeficiente de Variação do Erro Médio Quadrático'] #criar lista com as métricas disponíveis
 
 #-------------------------------------
