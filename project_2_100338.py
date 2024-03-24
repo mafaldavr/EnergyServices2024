@@ -198,8 +198,8 @@ app.layout = html.Div([
 #CRIAR UM CABEÇALHO ELEGANTE
     html.Div(style={'position':'relative', 'padding-top':'90px'},
     children=[
-        html.Img(src='IMAGES/logo.jpg', style={'position':'absolute', 'top':'5%', 'left':'5%', 'width':'168px', 'height':'67px'}),
-        html.Img(src='IMAGES/light.jpg', style={'position':'absolute', 'top':'5%', 'right':'5%', 'width':'67px','height': '67px'})]),
+        html.Img(src='logo.png', style={'position':'absolute', 'top':'5%', 'left':'5%', 'width':'168px', 'height':'67px'}),
+        html.Img(src='light.png', style={'position':'absolute', 'top':'5%', 'right':'5%', 'width':'67px','height': '67px'})]),
     html.H1('Previsão do Consumo Energético', style={'color':'#069EE1', 'text-align':'center', 'font-family':'Arial'}), #inserir títulos
     html.H2('Torre Norte do Instituto Superior Técnico', style={'color':'#42545E', 'text-align':'center', 'font-family':'Arial'}),
     html.H3('Mafalda Vila Rodrigues 100338', style={'color':'#42545E', 'text-align':'center', 'font-family':'Arial'}),
