@@ -1,0 +1,3 @@
+The dashboard is published online.
+Check the link below.
+https://energy-consumption-north-tower-dashboard.onrender.com/
