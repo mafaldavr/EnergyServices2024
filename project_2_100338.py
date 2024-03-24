@@ -190,6 +190,7 @@ available_metrics = ['Erro Médio Absoluto', 'Erro Médio Quadrático', 'Raiz do
 
 #CRIAR DASHBOARD
 app = dash.Dash(__name__)
+server = app.server
 app.layout = html.Div([
 
 #-------------------------------------    
